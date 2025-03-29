@@ -1,4 +1,3 @@
-# LocalAI configuration
 fullnameOverride: "localai"
 
 autoscaling:
@@ -19,7 +18,6 @@ serviceAccount:
   # AutomountServiceAccountToken indicates whether pods running as this service account should have an API token automatically mounted
   automount: true
 
-# LocalAI configuration 
 localai:
   enabled: true
   replicaCount: 1
@@ -28,12 +26,10 @@ localai:
     tag: latest
     pullPolicy: IfNotPresent
 
-  # Environment variables configuration
   env:
     - name: LOCALAI_MODELS_PATH
       value: /build/models
 
-  # Model configuration
   models:
     path: /build/models
     preload:

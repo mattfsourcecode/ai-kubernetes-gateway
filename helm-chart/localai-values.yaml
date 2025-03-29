@@ -1,16 +1,12 @@
-# Enable certificate management
 certificateEnabled: true
 
-# Service configuration
 service:
   port: 8080
   type: ClusterIP
 
-# Gateway API disabled (using ingress instead)
 gateway:
   enabled: true
 
-# LocalAI configuration
 localai:
   enabled: true
   env:
@@ -28,5 +24,4 @@ localai:
       size: 10Gi
       storageClassName: microk8s-hostpath
 
-# Fullname override
 fullnameOverride: localai
