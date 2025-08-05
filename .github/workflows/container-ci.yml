@@ -1,4 +1,6 @@
 name: Container CI
+permissions:
+  contents: read
 
 on:
   push:
