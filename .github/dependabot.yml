@@ -8,3 +8,9 @@ updates:
     target-branch: "master"
     allow:
       - dependency-type: "all"
+    groups:
+      all-dependencies:
+        patterns:
+          - "*"
+        update-types: ["minor", "patch", "major"]
+        applies-to: "version-updates"
